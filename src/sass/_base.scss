@@ -1,0 +1,62 @@
+/* Primary*/
+$color-bright-orange: hsl(31, 77%, 52%);
+$color-dark-cyan: hsl(184, 100%, 22%);
+$color-very-dark-cyan: hsl(179, 100%, 13%);
+
+/*Neutral*/
+$color-transparent-white: hsla(0, 0%, 100%, 0.75); /* paragraphs */
+$color-very-light-gray: hsl(0, 0%, 95%); /* background, headings, buttons */
+
+$bp-large: 78.15em; // 1250px
+$bp-medium: 61.25em; // 980px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 50%; // 8px
+  }
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $color-transparent-white;
+}
+
+.container {
+  max-width: 90rem;
+  min-height: 45rem;
+  margin: 4vw auto;
+  background-color: $color-very-light-gray;
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0 2rem 6rem 0.5rem rgba($color-very-light-gray, 0.2);
+
+  display: flex;
+
+  @media only screen and (max-width: $bp-medium) {
+    max-width: 65rem;
+    flex-flow: column wrap;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin: 15vw auto;
+    max-width: 40rem;
+  }
+}
